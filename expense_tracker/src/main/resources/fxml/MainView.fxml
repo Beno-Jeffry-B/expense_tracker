@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.expense_tracker.controller.MainViewController">
+
+    <top>
+        <MenuBar>
+            <Menu mnemonicParsing="false" text="File">
+                <MenuItem mnemonicParsing="false" onAction="#handleViewTransactionHistory" text="Transaction History" />
+                <MenuItem fx:id="logoutMenuItem" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+            </Menu>
+
+            <Menu mnemonicParsing="false" text="View">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleViewCalendar" text="Add transaction" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleViewStatistics" text="Statistics" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleShowAbout" text="About" />
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+            <Label fx:id="welcomeLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+            <TableView fx:id="transactionsTable" prefHeight="400.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Date" />
+                    <TableColumn fx:id="descriptionColumn" prefWidth="300.0" text="Description" />
+                    <TableColumn fx:id="amountColumn" prefWidth="150.0" text="Amount" />
+                    <TableColumn fx:id="categoryColumn" prefWidth="150.0" text="Category" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

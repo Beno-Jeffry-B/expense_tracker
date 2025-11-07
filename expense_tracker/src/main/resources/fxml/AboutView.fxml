@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fitToWidth="true"
+            vbarPolicy="AS_NEEDED"
+            hbarPolicy="NEVER"
+            style="-fx-background: #fafafa; -fx-background-color: #fafafa;">
+
+    <VBox fx:id="rootVBox"
+          spacing="20"
+          alignment="TOP_LEFT"
+          VBox.vgrow="ALWAYS"
+          minHeight="0"
+          style="-fx-background-color: #fafafa;">
+
+        <padding>
+            <Insets top="30" right="35" bottom="30" left="35"/>
+        </padding>
+
+        <Label text="💰 Expense Tracker"
+               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1a237e;"/>
+
+        <Label text="A Simple, Powerful Finance Tool for Daily Use"
+               wrapText="true"
+               style="-fx-font-size: 16px; -fx-text-fill: #424242;"/>
+
+        <Separator />
+
+        <VBox spacing="10">
+            <Label text="Who is this App For?"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #0d47a1;"/>
+            <Label wrapText="true"
+                   text="This application is built for individuals and small households who want clear, distraction-free money management."/>
+        </VBox>
+
+        <Separator />
+
+        <Label text="Application Manual &amp; Features"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #0d47a1;"/>
+
+        <VBox spacing="15"
+              VBox.vgrow="ALWAYS"
+              style="-fx-border-color: #dce1e6; -fx-border-radius: 8; -fx-background-color: #ffffff; -fx-padding: 18; -fx-background-radius: 8;">
+
+            <Label text="File Menu"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #263238;"/>
+
+            <HBox spacing="8">
+                <Label text="• Transaction History:" style="-fx-font-weight: bold;"/>
+                <Label wrapText="true"
+                       text="View and filter complete financial records with colored markers for income vs expense."/>
+            </HBox>
+
+            <Separator />
+
+            <Label text="View Menu — Financial Analysis"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #263238;"/>
+
+            <HBox spacing="8">
+                <Label text="• Calendar (Home):" style="-fx-font-weight: bold;"/>
+                <Label wrapText="true"
+                       text="Click any date to quickly add a new transaction."/>
+                <Label text="• Statistics:" style="-fx-font-weight: bold;"/>
+                <Label wrapText="true"
+                       text="User can visualize the trend on their Income and Expense."/>
+
+
+            </HBox>
+        </VBox>
+
+        <Separator />
+
+        <VBox spacing="4" alignment="CENTER" VBox.vgrow="ALWAYS">
+            <Label text="Application built using JavaFX | Spring Boot | MySQL | Lombok"
+                   style="-fx-font-size: 14px; -fx-text-fill: #616161;"/>
+            <Label text="Developed by: Beno Jeffry (23PW03) &amp; Madanika (23PW15)"
+                   style="-fx-font-size: 14px; -fx-text-fill: #1a237e; -fx-font-weight: bold;"/>
+        </VBox>
+
+    </VBox>
+
+</ScrollPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.expense_tracker.controller.StatisticsViewController"
+      spacing="20" alignment="TOP_CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="20" alignment="CENTER">
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Expense Breakdown by Category" style="-fx-font-size: 16px;"/>
+            <PieChart fx:id="categoryPieChart" title="Expense Breakdown"/>
+        </VBox>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Daily Spending" style="-fx-font-size: 16px;"/>
+            <BarChart fx:id="dailySpendingBarChart" title="Daily Spending">
+                <xAxis>
+                    <CategoryAxis label="Date"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Amount"/>
+                </yAxis>
+            </BarChart>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="20" alignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+            <Label text="Expense Trend Over Time" style="-fx-font-size: 16px;"/>
+            <LineChart fx:id="expenseTrendChart" title="Expense Trend" HBox.hgrow="ALWAYS">
+                <xAxis>
+                    <CategoryAxis label="Date"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Total Amount"/>
+                </yAxis>
+            </LineChart>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+            <Label text="Income Trend Over Time" style="-fx-font-size: 16px;"/>
+            <LineChart fx:id="incomeTrendChart" title="Income Trend" HBox.hgrow="ALWAYS">
+                <xAxis>
+                    <CategoryAxis label="Date"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Total Amount"/>
+                </yAxis>
+            </LineChart>
+        </VBox>
+    </HBox>
+</VBox>
